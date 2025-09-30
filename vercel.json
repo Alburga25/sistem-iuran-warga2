@@ -1,28 +1,26 @@
 {
     "version": 2,
     "framework": null,
+
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.7.4" }
     },
+
     "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
-        },
-        {
-            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
-            "dest": "/public/$1"
-        },
+        { "src": "/build/(.*)", "dest": "/build/$1" },
+        { "src": "/storage/(.*)", "dest": "/storage/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
+
     "public": true,
     "buildCommand": "vite build",
     "outputDirectory": "public",
+
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://iuran-warga-laravel.vercel.app",
-        "ASSET_URL": "https://iuran-warga-laravel.vercel.app",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://sistem-iuran-warga2.vercel.app",
+        "ASSET_URL": "https://sistem-iuran-warga2.vercel.app",
         "APP_KEY": "base64:fS2pBQ0PfJUJ+zaPM4wDHGJj30GfDzEHR/yN0VltJ14=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -38,3 +36,5 @@
         "DB_CONNECTION": "mysql"
     }
 }
+    
+
