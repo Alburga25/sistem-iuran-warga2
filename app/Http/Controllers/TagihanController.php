@@ -449,7 +449,7 @@ class TagihanController extends Controller
 
             $tanggalJatuhTempo = $tagihan ? Carbon::parse($tagihan->tanggal_jatuh_tempo)->format('d F Y') : '-';
 
-            $websiteUrl = 'https://iuran-warga-laravel.vercel.app/';
+            $websiteUrl = 'https://sistem-iuran-warga2.vercel.app/';
 
             $pesan = "Halo, {$user->name}. Anda memiliki tagihan iuran bulan ini yang belum dibayar. "
                 . "Mohon segera melunasi sebelum tanggal *{$tanggalJatuhTempo}*. "
